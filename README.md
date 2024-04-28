@@ -17,8 +17,14 @@ Authors can submit their literary works to be featured on the platform. By showc
 ### User Profiles
 Create a personalized user profile on BookWise to track your reading progress, save your favorite books, and interact with other members of the community.
 
-### Interactive Community
-Engage with fellow book lovers through discussions, reviews, and recommendations. BookWise fosters a vibrant and inclusive community where readers can connect, share insights, and discover new literary gems.
+#### Adding Books to Favorites
+Mark your favorite books and easily access them from your profile. BookWise allows you to create a curated list of your most beloved reads for quick reference and enjoyment.
+
+#### Purchase Links
+Find links to buy the books you love directly from BookWise. With convenient purchase links provided, you can easily acquire your favorite titles and expand your literary collection.
+
+#### User Authentication
+Securely sign in or sign up for a BookWise account to access personalized features, including book recommendations, favorites, and community interactions. BookWise ensures a seamless and secure authentication process for all users.
 
 ## Technologies Used
 
