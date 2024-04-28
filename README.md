@@ -33,6 +33,14 @@ BookWise is built using the following technologies:
 - Backend: Node.js, Express.js
 - Database: MySQL
 
+### Team Members
+
+Meet the talented individuals behind BookWise:
+
+- **[Abdulrahman Muhammad](https://github.com/Abdlrhman00)** - Backend Developer and Project Lead
+- **[Alaa Saeed](https://github.com/Alaa0Saeed)** - Backend Developer
+- **[Ahmed Mostafa](https://github.com/AhmedMu7)** - Frontend Developer
+- **[Kerolus Wageh] - Frontend Developer
 
 ## Feedback and Support
 
