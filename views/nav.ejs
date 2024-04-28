@@ -1,0 +1,159 @@
+<nav>
+    <ul class="navbar">
+        <a href="/home">
+        <img class="logo" src="../photos/ebook-icon-png-6.jpg">
+        </a>
+        <li class="left">
+        <a href="/home">Bookwise</a>
+        </li>
+        <li class="right">
+        <a href="/home">Home</a>
+        </li>
+        <li class="right">
+        <a href="/categories">Category</a>
+        </li>
+        <li class="right">
+        <a href="/submit" id="newbook-link">Submit</a>
+        </li>
+        <li class="right">
+          <a href="/favorites">Favorites</a>
+        </li>
+        <!--<input class="searchbar" type="text" placeholder="  search...">-->
+        <% if (!hasCookie) { %>
+        <button class="log-in" onclick="window.location.href = '/log/signin';" >Sign in</button>
+        <button class="sign-up" onclick="window.location.href = '/log/signup';" >Sign up</button>
+        <% } else { %>
+        <button class="log-in" id="logOut-btn" >Log out</button>
+        <% }%>
+    </ul>
+</nav>
+
+<script type="module">
+    import {deleteAllCookies} from '../controllers/co.js';
+
+    const logOutButton = document.getElementById('logOut-btn');
+    if (logOutButton) {
+    logOutButton.addEventListener('click', function() {
+        // Your event handler code here
+        deleteAllCookies();
+        window.location.href = '/home';
+    });
+    }
+    // document.getElementById('logOut-btn').addEventListener('click', function() {
+    //     if (logOutButton) {
+    //         logOutButton.addEventListener('click', function() {
+    //             // Your event handler code here
+    //             deleteAllCookies();
+    //             window.location.href = '/home';
+    //         });
+        
+    // });
+</script>
+
+<style>
+    
+    ul.navbar {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      background-color: #fff2da;
+      text-align: center;
+      overflow: hidden;
+      position: sticky;
+      z-index: 1000;
+      top: 0;
+      box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.3s ease;
+    }
+    
+    ul.navbar li {
+      display: inline-block;
+    }
+    
+    .navbar .left a {
+      margin-top: 3px;
+      margin-right: 122.4px;
+      margin-left: 20px;
+      display: inline-block;
+      padding: 8px 16px;
+      text-decoration: none;
+      color: #11237ce2;
+      font-size: 29px;
+      font-weight: 900;
+      font-family: "Rubik", sans-serif;
+    }
+    
+    .logo {
+      position: absolute;
+      top: 4px;
+      left: 65px;
+      width: 45px;
+    }
+    .logo :hover {
+      cursor: pointer;
+    }
+    
+    .navbar .right a {
+      margin-top: 3px;
+      display: inline-block;
+      padding: 8px 16px;
+      text-decoration: none;
+      color: #333;
+      font-size: 20px;
+      font-family: "Rubik", sans-serif;
+      font-weight: bold;
+      transition: transform 0.3s ease-in-out;
+    }
+    .navbar .right a:hover {
+      transform: scale(1.2);
+      opacity: 0.9;
+    }
+    
+    .searchbar {
+      margin-bottom: 10px;
+      margin-left: 130px;
+      height: 25px;
+      border-radius: 20px;
+      border-style: solid;
+      border-color: #ebe5e5;
+    }
+    
+    .log-in {
+      font-family: "Rubik", sans-serif;
+      font-weight: bold;
+      height: 30px;
+      margin-left: 10px;
+      margin-right: 5px;
+      border-radius: 5px;
+      border-style: hidden;
+      background-color: #11237ce2;
+      color: white;
+      transition: opacity 0.15;
+    }
+    .log-in:hover {
+      cursor: pointer;
+      opacity: 0.9;
+    }
+    .log-in:active {
+      background-color: white;
+      color: #11237ce2;
+    }
+    
+    .sign-up {
+      font-family: "Rubik", sans-serif;
+      font-weight: bold;
+      height: 30px;
+      border-radius: 5px;
+      border-style: hidden;
+      background-color: #11237ce2;
+      color: white;
+    }
+    .sign-up:hover {
+      cursor: pointer;
+      opacity: 0.9;
+    }
+    .sign-up:active {
+      background-color: white;
+      color: #11237ce2;
+    }
+  </style>

@@ -1,0 +1,9 @@
+<!-- Assuming you have a book details EJS template -->
+<% console.log('b',bookInfo) %>
+<div>
+    <h1><%= bookInfo[0].title %></h1>
+    <p>Author: <%= bookInfo[0].author_name %></p>
+    <p>Description: <%= bookInfo[0].description %></p>
+    <a href="<%= bookInfo[0].buy_link %>">Buy Now</a>
+  </div>
+  

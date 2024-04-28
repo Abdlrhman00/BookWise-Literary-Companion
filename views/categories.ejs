@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Bookwise </title>
+    <link rel="icon" href="../photos/ebook-icon-png-6.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="../css/user-home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Rubik&display=swap" rel="stylesheet">
+
+    <%- include('nav.ejs') %>
+
+  </head>
+  <body>
+    <div class="catebar">
+      <li class="cate-list">
+        <a href="/categories/Children">Children</a>
+      </li>
+      <li class="cate-list">
+        <a href="/categories/Comedy">Comedy</a>
+      </li>
+      <li class="cate-list">
+        <a href="/categories/Historical fiction">Historical Fiction</a>
+      </li>
+      <li class="cate-list">
+        <a href="/categories/Horror">Horror</a>
+      </li>
+      <li class="cate-list">
+        <a href="/categories/Mystery and crime">Mistry and crime</a>
+      </li>
+      <li class="cate-list">
+        <a href="/categories/Science fiction">Science fiction</a>
+      </li>
+      <li class="cate-list">
+        <a href="/categories/Fantasy">Fantasy</a>
+      </li>
+      <li class="cate-list">
+        <a href="/categories/Romance">Romance</a>
+      </li>
+    </div>
+    <div class="wel-cate">
+        <% if(categoryName === '') {%>
+      <p class="line1"> Collection of best books in categories </p>
+      <% } else { %>
+        <p class="line1"> Collection of best books in  <%= categoryName %> category </p>
+        <% } %>
+      <p class="line2"> find your passion </p>
+    </div>
+    <hr class="hr">
+    <div class="container" id="books-container">
+        <% books.forEach(book => { %>
+          <a href="/book/<%= book.book_id %>">
+            <div class="content" id="<%= book.book_id %>">
+              <div class="cover">
+                <img class="pic1" src="data:image/jpeg;base64,<%= book.cover_photo.toString('base64') %>" alt="<%= book.title %>">
+              </div>
+              <div class="info1">
+                <h3><%= book.title %></h3>
+                <p><%= book.short_description %>...</p>
+              </div>
+              <div class="info2">
+                <h5>Author: <%= book.author_name %></h5>
+              </div>
+            </div>
+          </a>
+          <% }); %>
+    </div>
+    <%- include('footer-links.ejs') %>
+
+  </body>
+</html>

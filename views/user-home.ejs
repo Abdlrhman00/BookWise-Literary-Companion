@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bookwise</title>
+    <link rel="icon" href="../photos/ebook-icon-png-6.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="../css/user-home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Rubik&display=swap" rel="stylesheet">
+    <%- include('nav.ejs') %>
+
+  </head>
+  <body>
+    <!-- <ul class="navbar">
+      <a href="/home">
+        <img class="logo" src="../photos/ebook-icon-png-6.jpg">
+      </a>
+      <li class="left">
+        <a href="/home">Bookwise</a>
+      </li>
+      <li class="right">
+        <a href="/home">Home</a>
+      </li>
+      <li class="right">
+        <a href="/categories">Category</a>
+      </li>
+      <li class="right">
+        <a href="/submit" id="newbook-link">Submit</a>
+      </li>
+      <input class="searchbar" type="text" placeholder="  search...">
+      <button class="log-in">Log in</button>
+      <button class="sign-up">sign up</button>
+    </ul> -->
+    
+    <div class="welcomep">
+      <p class="p1">Discover weekly, the best</p>
+      <p class="p2">new books</p>
+      <p class="p3">Get early access to fresh indie books and help</p>
+      <p class="p4">on the bestselling stories of tomorrow.</p>
+      <% if (!hasCookie) { %>
+      <button class="creatacc" onclick="window.location.href = '/log/signup'">Create your account now</button>
+      <% } %>
+    </div>
+    <div class="container" id="books-container">
+      <!-- Content goes here -->
+      <% books.forEach(book => { %>
+        <a href="/book/<%= book.book_id %>">
+          <div class="content" id="<%= book.book_id %>">
+            <div class="cover">
+              <img class="pic1" src="data:image/jpeg;base64,<%= book.cover_photo.toString('base64') %>" alt="<%= book.title %>">
+            </div>
+            <div class="info1">
+              <h3><%= book.title %></h3>
+              <p><%= book.short_description %>...</p>
+            </div>
+            <div class="info2">
+              <h5>Author: <%= book.author_name %></h5>
+            </div>
+          </div>
+        </a>
+      <% }); %>
+    </div>
+
+    <%- include('footer-links.ejs') %>
+
+    <!-- <div>
+      <ul class="navbar-bot" id="bottom-bar">
+        <li>
+          <button class="previous">&lt; Previous page</button>
+        </li>
+        <li>
+          <a href="?page=1">1</a>
+        </li>
+        <li>
+          <a href="?page=2">2</a>
+        </li>
+        <li>
+          <a href="?page=3">3</a>
+        </li>
+        <li>
+          <a href="?page=4">4</a>
+        </li>
+        <li>
+          <button class="next">Next page &gt;</button>
+        </li>
+      </ul>
+    </div> -->
+     <!-- <script src="../controllers/user-home.js"></script> -->
+  </body>
+</html>

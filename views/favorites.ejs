@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bookwise</title>
+    <link rel="icon" href="../photos/ebook-icon-png-6.jpg" type="image/x-icon">
+    <% if (hasCookie) { %>
+    <link rel="stylesheet" href="../css/user-home.css">
+    <% } %>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Rubik&display=swap" rel="stylesheet">
+    <%- include('nav.ejs') %>
+
+  </head>
+  <body>
+    <% if (!hasCookie) { %>
+        <%- include('creatAcc.ejs') %>
+        <% } else {%>
+    <!-- <ul class="navbar">
+      <a href="/home">
+        <img class="logo" src="../photos/ebook-icon-png-6.jpg">
+      </a>
+      <li class="left">
+        <a href="/home">Bookwise</a>
+      </li>
+      <li class="right">
+        <a href="/home">Home</a>
+      </li>
+      <li class="right">
+        <a href="/categories">Category</a>
+      </li>
+      <li class="right">
+        <a href="/submit" id="newbook-link">Submit</a>
+      </li>
+      <input class="searchbar" type="text" placeholder="  search...">
+      <button class="log-in">Log in</button>
+      <button class="sign-up">sign up</button>
+    </ul> -->
+    
+
+    <div class="container" id="books-container">
+      <!-- Content goes here -->
+      <% books.forEach(book => { %>
+        <a href="/book/<%= book.book_id %>">
+          <div class="content" id="<%= book.book_id %>">
+            <div class="cover">
+              <img class="pic1" src="data:image/jpeg;base64,<%= book.cover_photo.toString('base64') %>" alt="<%= book.title %>">
+            </div>
+            <div class="info1">
+              <h3><%= book.title %></h3>
+              <p><%= book.short_description %>...</p>
+            </div>
+            <div class="info2">
+              <h5>Author: <%= book.author_name %></h5>
+            </div>
+          </div>
+        </a>
+      <% }); %>
+    </div>
+
+
+    <% } %>
+  </body>
+</html>
+
+

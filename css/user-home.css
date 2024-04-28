@@ -1,0 +1,433 @@
+body {
+    margin: 0px;
+    background-image: url("../photos/10026.jpg");
+  }
+  /* ul.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #fff2da;
+    text-align: center;
+    overflow: hidden;
+    position: sticky;
+    z-index: 1000;
+    top: 0;
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  ul.navbar li {
+    display: inline-block;
+  }
+  
+  .navbar .left a {
+    margin-top: 3px;
+    margin-right: 122.4px;
+    display: inline-block;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: #11237ce2;
+    font-size: 29px;
+    font-weight: 900;
+    font-family: "Rubik", sans-serif;
+  }
+  
+  .logo {
+    position: absolute;
+    top: 4px;
+    left: 205px;
+    width: 45px;
+  }
+  .logo :hover {
+    cursor: pointer;
+  }
+  
+  .navbar .right a {
+    margin-top: 3px;
+    display: inline-block;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: #333;
+    font-size: 20px;
+    font-family: "Rubik", sans-serif;
+    font-weight: bold;
+    transition: transform 0.3s ease-in-out;
+  }
+  .navbar .right a:hover {
+    transform: scale(1.2);
+    opacity: 0.9;
+  }
+  
+  .searchbar {
+    margin-bottom: 10px;
+    margin-left: 130px;
+    height: 25px;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: #ebe5e5;
+  }
+  
+  .log-in {
+    font-family: "Rubik", sans-serif;
+    font-weight: bold;
+    height: 30px;
+    margin-left: 10px;
+    margin-right: 5px;
+    border-radius: 5px;
+    border-style: hidden;
+    background-color: #11237ce2;
+    color: white;
+    transition: opacity 0.15;
+  }
+  .log-in:hover {
+    cursor: pointer;
+    opacity: 0.9;
+  }
+  .log-in:active {
+    background-color: white;
+    color: #11237ce2;
+  }
+  
+  .sign-up {
+    font-family: "Rubik", sans-serif;
+    font-weight: bold;
+    height: 30px;
+    border-radius: 5px;
+    border-style: hidden;
+    background-color: #11237ce2;
+    color: white;
+  }
+  .sign-up:hover {
+    cursor: pointer;
+    opacity: 0.9;
+  }
+  .sign-up:active {
+    background-color: white;
+    color: #11237ce2;
+  } */
+  .catebar li{
+    display:inline-block;
+    padding: 8px 16px;
+    margin-top: 5px;
+}
+.catebar{
+margin-top: 40px;
+text-align: center;
+background-color: #f6ebd9;
+width: 100%;
+height: 50px;
+transition: 0.3s;
+box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.1) ;
+}
+.cate-list a{
+color: #333;
+font-size: 20px;
+font-family: 'Rubik', sans-serif;
+text-decoration: none;
+transition: 0.5s;
+}
+.cate-list a:hover{
+    color: #bb5a0b;
+}
+
+.wel-cate{
+  margin-top: 60px;
+}
+.line1{
+  font-family: "Lora",serif;
+  font-size: 30px;
+  margin: 0 0 8px;
+  margin-left: 268px;
+  font-weight: bold;
+  color: #333;
+}
+.line2{
+  font-family: "Lora",serif;
+  font-size: 20px;
+  margin: 0 0 8px;
+  margin-left: 270px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 60px;
+}
+
+
+  
+  .p1{
+    font-family: "Lora",serif;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 1.285;
+    margin: 0 0 8px;
+    margin-top: 90px;
+    margin-left: 20px;
+    font-weight: bold;
+    background-image: url("../photos/vecteezy_young-people-read-books-in-library_13977695.jgp");
+    background-size: cover; 
+    text-align: center;
+    color: #333;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.8);
+  
+  }
+  .p2{
+    font-family: "Lora",serif;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 1.285;
+    margin: 0 0 8px;
+    margin-left: 478px;
+    font-weight: bold;
+    color: #333;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.8);
+  
+  }
+  .p3{
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    line-height: 1.5;
+    margin-left: 478px;
+    color: #333;
+    font-weight: bolder;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.8);
+   
+  }
+  .p4{
+    font-family: "Rubik",sans-serif;
+    font-size: 20px;
+    line-height: 0px;
+    margin-left: 478px;
+    color: #333;
+    font-weight: bolder;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.8);
+  
+  }
+  
+  .creatacc{
+    font-family: "Rubik",sans-serif;
+    margin-top: 10px;
+    margin-left: 478px; 
+    height: 40px; 
+    font-size: 25px;
+    background-color: #edc001;
+    color: white;
+    border-style: hidden;
+    border-radius: 10px;
+    transition: opacity 0.15;
+    font-weight: 500;
+    height: 50px;
+    width: 350px;
+  }
+  
+  .creatacc:hover{
+    cursor: pointer;  
+    opacity:0.9;
+  }
+  .creatacc:active{
+  background-color: white;
+  color:#edc001 ;
+  transition: 0.7;
+  }
+
+  .pic1 {
+    width: 154px;
+    height: 246px;
+  }
+  .content {
+    margin-top: 30px;
+    margin-left: 60px;
+    margin-right: 0px;
+    width: 450px;
+    height: 320px;
+    position: relative;
+    display: grid;
+    grid-column-gap: 20px;
+    grid-template-columns: 98px auto;
+    border-bottom: 2px solid #714b274c;
+    padding: 10px;
+  }
+  .cover {
+    flex: 4.5;
+    margin: 0;
+    height: 260px;
+    width: 154px;
+  }
+  .info1,
+  .info2 {
+    font-family: "Lora", serif;
+    flex: 7;
+    margin: 0;
+    height: 56px;
+    width: 232px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    display: block;
+    margin-left: 60px;
+    font-size: 20px;
+  }
+  .info3 {
+    font-family: "Lora", serif;
+    flex: 7;
+    margin: 0;
+    height: px;
+    width: 278;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    display: block;
+    margin-left: 60px;
+    font-size: 15px;
+  }
+  .desc {
+    position: absolute;
+    bottom: 0;
+    font-size: 16px;
+    font-family: "Lora", serif;
+  }
+  .container {
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    box-sizing: border-box;
+    display: grid;
+    width: 0;
+    margin-left: 150px;
+  }
+  .container a {
+    text-decoration: none;
+   color: black;
+  }
+  ul.navbar-bot li a {
+    display: block;
+    padding: 8px 8px;
+    text-decoration: none;
+    color: #000000;
+    font-size: 20px;
+    font-family: "Rubik", sans-serif;
+    font-weight: bold;
+  }
+  ul.navbar-bot {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #fff2da;
+    text-align: center;
+    overflow: hidden;
+  }
+  ul.navbar-bot li {
+    display: inline-block;
+  }
+  .next {
+    display: inline-block;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: #333;
+    font-size: 20px;
+    font-family: "Rubik", sans-serif;
+    font-weight: bold;
+    border-style: hidden;
+    background-color: #fff2da;
+    margin-left: 300px;
+    color: #000000;
+  }
+  .pervious {
+    display: inline-block;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: #333;
+    font-size: 20px;
+    font-family: "Rubik", sans-serif;
+    font-weight: bold;
+    border-style: hidden;
+    margin-right: 300px;
+    background-color: #fff2da;
+    color: #000000;
+  }
+  .next,
+  .pervious:hover {
+    cursor: pointer;
+  }
+
+  
+  
+  .welcomep {
+    padding-top: 10px;
+    height: 100%;
+    margin-bottom: 20px;
+    padding-bottom: 55px;
+    background-image: url("../photos/b.jpg");
+    background-size: cover;
+    box-shadow: 0px 40px 20px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+  }
+
+
+
+  /*
+  .hidden-box {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-wrap: break-word;
+  }
+  .content:hover .hidden-box {
+    display: block;
+    animation: swing-in-top-fwd 9s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+    
+  }
+  
+   ----------------------------------------------
+   * Generated by Animista on 2023-12-11 1:10:58
+   * Licensed under FreeBSD License.
+   * See http://animista.net/license for more info. 
+   * w: http://animista.net, t: @cssanimista
+   * ---------------------------------------------- */
+  
+  /**
+   * ----------------------------------------
+   * animation swing-in-top-fwd
+   * ----------------------------------------
+  
+   @-webkit-keyframes swing-in-top-fwd {
+    0% {
+      -webkit-transform: rotateX(-100deg);
+              transform: rotateX(-100deg);
+      -webkit-transform-origin: top;
+              transform-origin: top;
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: rotateX(0deg);
+              transform: rotateX(0deg);
+      -webkit-transform-origin: top;
+              transform-origin: top;
+      opacity: 1;
+    }
+  }
+  @keyframes swing-in-top-fwd {
+    0% {
+      -webkit-transform: rotateX(-100deg);
+              transform: rotateX(-100deg);
+      -webkit-transform-origin: top;
+              transform-origin: top;
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: rotateX(0deg);
+              transform: rotateX(0deg);
+      -webkit-transform-origin: top;
+              transform-origin: top;
+      opacity: 1;
+    }
+  }
+  */
+  

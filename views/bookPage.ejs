@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <title> Bookwise </title>
+  <link rel="icon" href="../photos/ebook-icon-png-6.jpg" type="image/x-icon">
+  <head>
+    <link rel="stylesheet" href="../css/bookPage.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Rubik&display=swap" rel="stylesheet">
+    <%- include('nav.ejs') %>
+    <!-- <ul class="navbar"><a href="#"><img class="logo" src="ebook-icon-png-6.jpg"></a><li class="left"><a href="website.html">Bookwise</a></li><li class="right" ><a href="website.html">Home</a></li><li class="right"><a href="Categories.html">Categories</a></li><li class="right"><a href="submit.html">Submit</a></li><input class="searchbar" type="text" placeholder="  search..."><a href="Login.html"><button class="log-in">Log in</button></a><a href="signup.html"><button class="sign-up">sign up</button></a></ul> -->
+  </head>
+  <body>
+    <div class="bground" id="<%= book[0].book_id %>">
+      <img class="bground_pic" src="data:image/jpeg;base64,<%= book[0].cover_photo.toString('base64') %>" alt="<%= book[0].title %>">
+      <div class="content">
+        <div class="cover">
+          <img class="pic1" src="data:image/jpeg;base64,<%= book[0].cover_photo.toString('base64') %>" alt="<%= book[0].title %>">
+        </div>
+        <div>
+          <p class="info1"><%= book[0].title %></p>
+          <p class="info2"><%= book[0].author_name %></p>
+          
+          <button class="favorite" id="like-btn"> &#128077; Like </button>
+
+          <a href="https://<%= book[0].buy_link %>">
+            <button class="buy"> Buy Now</button>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="desc_cont">
+      <p class="title"> Description 🖊️</p>
+      <p class="desc"><%= book[0].description %></p>
+    </div> 
+    <div class="com_cont">
+      <p class="com_title">Comments</p>
+      <input class="com_text" type="text" placeholder="Write a comment">
+      <div class="comment">
+        <img src="/photos/profile.png" User Photo" class="user-photo">
+        <div class="comment-content">
+          <div class="username">John Doe</div>
+          <p class="com">This is the comment text s is the comment text s is the comments is the comment texts is the comment texts is the comment text text s is the comment text s is the comment text. It can span multiple lines.</p>
+        </div>
+      </div>
+      <div class="comment">
+        <img src="/photos/profile.png" alt="User Photo" class="user-photo">
+        <div class="comment-content">
+          <div class="username">Jane Smith</div>
+          <p class="com">Another comment goes here.</p>
+        </div>
+      </div>
+      <div class="comment">
+        <img src="/photos/profile.png" alt="User Photo" class="user-photo">
+        <div class="comment-content">
+          <div class="username">Jane Smith</div>
+          <p class="com">Another commennother conother conother conother conother conother conother conother conother conother conother conother cot goes here.</p>
+        </div>
+      </div>
+      <div class="comment">
+        <img src="/photos/profile.png" alt="User Photo" class="user-photo">
+        <div class="comment-content">
+          <div class="username">Jane Smith</div>
+          <p class="com"> Another comment goes hereAnother comment goes hereAnother comment goes hereAnother comment goes hereAnother comment goes hereAnother comment goes here.</p>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="../controllers/bookPage.js">
+        function changeLike(){
+    const likeBtn = document.getElementById('like-btn');
+
+    likeBtn.style.backgroundColor = '#edc001'; // Change the color to red when clicked
+    likeBtn.style.color = 'white';
+  }
+    </script>
+  </body>
+</html>

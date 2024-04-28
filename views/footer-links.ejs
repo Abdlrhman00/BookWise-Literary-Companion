@@ -1,0 +1,23 @@
+<% console.log('totalPages',totalPages) %>
+<div id="page-links-container">
+    <ul class="navbar-bot" id="bottom-bar">
+    <% if (currentPage > 1) { %>
+        <li>
+      <a href="?page=<%= currentPage - 1 %>">Previous</a>
+    </li>
+    <% } %>
+    <!-- <% for (let i = 1; i <= totalPages; i++) { %>
+      <% if ( i === currentPage - 1 || i === currentPage || i === currentPage + 1 ) { %>
+        <li>
+        <a href="?page=<%= i %>"><%= i %></a>
+    </li>
+      <% } else if (i === 2 || i === currentPage - 2 || i === currentPage + 2) { %>
+        <li><span class="ellipsis">...</span></li>
+      <% } %> 
+    <% } %> -->
+    <% if (currentPage < totalPages) { %>
+        <li><a href="?page=<%= currentPage + 1 %>">Next</a></li>
+    <% } %>
+</ul>
+  </div>
+  

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <title> Bookwise </title>
+  <link rel="icon" href="../photos/ebook-icon-png-6.jpg" type="image/x-icon">
+  <head>
+    <link rel="stylesheet" href="../css/submit.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Rubik&display=swap" rel="stylesheet">
+    <%- include('nav.ejs') %>
+
+  </head>
+  <body>
+    <% if (!hasCookie) { %>
+      <%- include('creatAcc.ejs') %>
+      <% } else {%>
+    <div class="header">
+      <p class="maintitle">Submit your book</p>
+      <p class="mainsuptitle">Launch your book in style by submitting it for Book Wise. Fill out the following information and we'll have you ready in no time.</p>
+    </div>
+    <div>
+      <p class="title">Book title</p>
+      <input class="titletext" type="text" name="" id="book-title-input" placeholder="Enter your book title...">
+    </div>
+    <hr>
+    <div>
+      <p class="title">Description</p>
+      <p class="suptitle">Contribute to our community! Add book descriptions to help fellow readers discover new stories. Share your insights and inspire others today!</p>
+      <textarea class="desctext" name="" id="book-dicrip-input" cols="30" rows="10" placeholder="Briefly describe your book..."></textarea>
+    </div>
+    <hr>
+    <div>
+      <label class="title">Genre</label>
+      <select class="genreselect" id="category-input" name="category-input" placeholder="select a genre">
+        <option id="2" value="comedy">Comedy</option>
+        <option id="7" value="fantasy">Fantasy</option>
+        <option id="3" value="historical-fiction">Historical Fiction</option>
+        <option id="8" value="romance">Romance</option>
+        <option id="6" value="science-fiction">Science Fiction</option>
+        <option id="5" value="mistry_and_crime">Mistry and crime</option>
+        <option id="4" value="horror">Horror</option>
+        <option id="1" value="children">Children</option>
+      </select>
+    </div>
+    <hr>
+    <div>
+      <label class="title">Publisher</label>
+      <input class="pubtext" id="author-input" type="text" placeholder="Publisher's name...">
+    </div>
+    <hr>
+    <div>
+      <p class="title">Upload the front cover of your book</p>
+      <p class="suptitle">Please upload the front cover only. The thumbnail should not include the spine or back cover. nor a background around the cover.</p>
+      <p class="suptitle">For best results, please upload a JPG file that has a ratio of 1.6 and measures at least 1250px on the longest side </p>
+      <input class="coverpic" id="cover-photo" name="coverPhoto" type="file">
+    </div>
+    <hr>
+    <div>
+      <p class="title">Publication date</p>
+      <p class="suptitle">When is your book being published with retailers</p>
+      <input class="dataselect" id="publish-date" name="publish-date" type="date" placeholder="choose date">
+    </div>
+    <div>
+        <p class="title">URL buy link:</p>
+        <!-- <p class="suptitle">When is your book being published with retailers</p> -->
+        <input class="pubtext" type="text" id="buyUrl-input">
+    </div>
+    
+    <button class="submit-button" id="add-book-btn">Submit</button>
+    <% } %>
+
+    <script type="module" src="../controllers/newbook.js"></script>
+  </body>
+</html>
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book</title>
+</head>
+<body>
+    <main>
+        <label>Book's title:</label>
+        <input type="text" id="book-title-input">
+        <br>
+        <label>Add dicription:</label>
+        <input type="text" id="book-dicrip-input">
+        <br>
+        <label>category</label>
+        <select id="category-input" name="category-input">
+            <option id="6" value="science-fiction">Science Fiction</option>
+            <option id="4" value="horror">Horror</option>
+            <option id="2" value="comedy">Comedy</option>
+            <option id="1" value="children">Children</option>
+            
+        </select>
+        <br>
+        <label>Word count</label>
+        <!-- <select id="word-count-input" name="word-count-input">
+            <option value="one-thous">1000</option>
+            <option value="two-thous">2000</option>
+            <option value="three-thous">3000</option>
+            <option value="four-thous">4000</option>
+        </select> 
+        <br>
+        <label>Front cover</label>
+        <input type="file" id="cover-photo" name="coverPhoto">
+        <br>
+        <label>Publication date</label>
+        <input type="date" id="publish-date" name="publish-date">
+        <br>
+        <label>Author name:</label>
+        <input type="text" id="author-input">
+        <br>
+        <label>URL buy link:</label>
+        <input type="text" id="buyUrl-input">
+        <button id="add-book-btn">Submit</button>
+    </main>
+    <script type="module" src="../controllers/newbook.js"></script>
+</body>
+</html> -->
